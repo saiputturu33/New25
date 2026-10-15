@@ -1,1 +1,193 @@
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Vibes 🚀</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #080816;
+      color: white;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 8%;
+    }
+
+    nav h2 {
+      color: #00f5ff;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      border: 1px solid #00f5ff;
+      padding: 10px 18px;
+      border-radius: 25px;
+    }
+
+    .hero {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 8vw, 85px);
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #00f5ff, #b400ff, #ff4ecd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      max-width: 550px;
+      color: #b7b7d1;
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    button {
+      padding: 15px 30px;
+      border: none;
+      border-radius: 30px;
+      background: #00f5ff;
+      color: #080816;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 30px #00f5ff;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 30px 8% 70px;
+    }
+
+    .card {
+      width: 260px;
+      padding: 30px;
+      background: #131329;
+      border: 1px solid #29294b;
+      border-radius: 20px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      border-color: #00f5ff;
+      box-shadow: 0 0 25px #00f5ff22;
+    }
+
+    .card h3 {
+      color: #00f5ff;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      color: #b7b7d1;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #777792;
+      border-top: 1px solid #22223b;
+    }
+
+    #message {
+      color: #ff4ecd;
+      margin-top: 20px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <h2>NEON.</h2>
+    <a href="#explore">Explore</a>
+  </nav>
+
+  <section class="hero">
+    <h1>Enter Another World.</h1>
+
+    <p>
+      Welcome to your digital playground.
+      Explore creative ideas, futuristic designs,
+      and unlimited possibilities.
+    </p>
+
+    <button onclick="changeVibe()">✨ Change the Vibe</button>
+
+    <div id="message"></div>
+  </section>
+
+  <section class="cards" id="explore">
+    <div class="card">
+      <h3>🚀 Innovation</h3>
+      <p>Think beyond limits and turn your wildest ideas into reality.</p>
+    </div>
+
+    <div class="card">
+      <h3>🎨 Creativity</h3>
+      <p>Make something unique, beautiful, and completely yours.</p>
+    </div>
+
+    <div class="card">
+      <h3>⚡ Energy</h3>
+      <p>Bring your ideas to life with bold colors and futuristic vibes.</p>
+    </div>
+  </section>
+
+  <footer>
+    Made with ❤️ and code | © 2026 Neon Vibes
+  </footer>
+
+  <script>
+    const vibes = [
+      "You're built for greatness 🔥",
+      "Dream big. Start now 🚀",
+      "Your imagination has no limits 🌌",
+      "Keep creating, legend ⚡",
+      "Make today unforgettable 💜"
+    ];
+
+    function changeVibe() {
+      const randomIndex = Math.floor(Math.random() * vibes.length);
+      document.getElementById("message").textContent =
+        vibes[randomIndex];
+    }
+  </script>
+</body>
+</html>
